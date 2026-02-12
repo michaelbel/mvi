@@ -1,5 +1,3 @@
-/.github/keystore_release.jks
-/.github/keystore.properties
 .kotlin
 .gradle
 .idea
@@ -7,4 +5,4 @@ build
 build-cache
 generated
 local.properties
-releaseNotes.txt
+app/debug

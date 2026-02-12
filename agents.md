@@ -1,5 +1,6 @@
-This repository contains shared instructions for contributors.
+# Agent Guidelines
 
-- Follow existing coding standards and conventions found in each module.
-- Run relevant tests for any changed modules before committing.
-- Update documentation when behavior changes.
+- Scope: entire repository.
+- Prefer running `./gradlew test` after making changes that affect application behavior.
+- Follow existing Kotlin and Gradle conventions; keep documentation concise and in markdown.
+- Avoid adding unnecessary dependencies or tools without justification.
