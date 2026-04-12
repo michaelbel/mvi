@@ -34,7 +34,7 @@ jobs:
       SHORT_SHA: ${{ needs.job-common.outputs.SHORT_SHA }}
     steps:
       - name: checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -68,7 +68,7 @@ jobs:
         run: ./gradlew assembleDebug
 
       - name: upload artifacts to outputs
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           path: |
             app/build/outputs/apk
