@@ -3,9 +3,11 @@
 package org.michaelbel.mvi.feature
 
 import android.widget.Toast
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
@@ -51,18 +53,20 @@ fun FeatureScreen(
             )
         }
     ) { innerPadding ->
-        Box(
-            modifier = Modifier
-                .padding(innerPadding)
-                .fillMaxSize(),
-            contentAlignment = Alignment.Center
+        LazyColumn(
+            modifier = Modifier.fillMaxSize(),
+            contentPadding = innerPadding,
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Button(
-                onClick = { viewModel.dispatch(FeatureIntent.OnButtonClick) }
-            ) {
-                Text(
-                    text = state.buttonText
-                )
+            item {
+                Button(
+                    onClick = { viewModel.dispatch(FeatureIntent.OnButtonClick) }
+                ) {
+                    Text(
+                        text = state.buttonText
+                    )
+                }
             }
         }
     }
