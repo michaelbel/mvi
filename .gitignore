@@ -1,9 +1,9 @@
-.kotlin
-.gradle
-.idea
-.claude
-build
-build-cache
-generated
+.kotlin/
+.gradle/
+.idea/*
+!.idea/icon.svg
+.claude/
+build/
+
+.DS_Store
 local.properties
-app/debug
