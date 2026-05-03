@@ -69,6 +69,7 @@ dependencies {
 }
 
 tasks.register("printVersion") {
+    description = "Prints the current versionName and versionCode to stdout."
     doLast {
         println("VERSION_NAME=${android.defaultConfig.versionName}")
         println("VERSION_CODE=${android.defaultConfig.versionCode}")
