@@ -1,4 +1,4 @@
-package org.michaelbel.mvi.feature
+package org.michaelbel.mvi.feature.model
 
 import org.michaelbel.mvi.mvi.Model
 

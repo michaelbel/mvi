@@ -4,9 +4,7 @@ package org.michaelbel.mvi.feature
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -22,6 +20,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import org.michaelbel.mvi.R
+import org.michaelbel.mvi.feature.event.FeatureEvent
+import org.michaelbel.mvi.feature.intent.FeatureIntent
 import org.michaelbel.mvi.mvi.ObserveAsEvents
 
 @Composable
@@ -35,7 +35,7 @@ fun FeatureScreen(
         flow = viewModel.eventFlow
     ) { event ->
         when (event) {
-            is FeatureEvents.ShowToast -> {
+            is FeatureEvent.ShowToast -> {
                 Toast.makeText(context, event.message, Toast.LENGTH_SHORT).show()
             }
         }
