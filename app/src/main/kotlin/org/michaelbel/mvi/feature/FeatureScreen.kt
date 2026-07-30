@@ -43,15 +43,7 @@ fun FeatureScreen(
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
-        topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = stringResource(R.string.app_name)
-                    )
-                }
-            )
-        }
+        topBar = { TopAppBar(title = { Text(text = stringResource(R.string.app_name)) }) }
     ) { innerPadding ->
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
